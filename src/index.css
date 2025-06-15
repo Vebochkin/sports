@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-black text-white font-sans;
+  }
+}
+
+@layer components {
+  .container {
+    @apply w-full max-w-[360px] flex flex-col mx-auto px-4;
+  }
+
+  .input-wrapper {
+    @apply relative mb-5;
+  }
+
+  .input-wrapper input {
+    @apply w-full py-3.5 px-3.5 bg-dark-100 border-none rounded-xl text-sm text-white;
+  }
+
+  .input-wrapper .icon {
+    @apply absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 opacity-70;
+  }
+
+  .btn-continue {
+    @apply w-full py-3.5 bg-primary border-none rounded-xl text-base font-medium text-white mb-5;
+  }
+
+  .create-account {
+    @apply text-center text-xs mb-6 text-gray-400;
+  }
+
+  .create-account a {
+    @apply text-white font-semibold no-underline;
+  }
+
+  .divider {
+    @apply flex items-center justify-center text-gray-500 text-xs mb-6;
+  }
+
+  .divider::before,
+  .divider::after {
+    content: '';
+    @apply flex-1 h-px bg-gray-700 mx-2;
+  }
+
+  .socials {
+    @apply flex justify-center;
+  }
+}
